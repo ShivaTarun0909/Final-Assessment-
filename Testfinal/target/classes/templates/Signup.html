@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="style.css">
+        <script rel="javascript" href="Validation.js"></script>
+</head>
+<body>
+<div align="center">
+    <h1>Please signup Here</h1>
+    <br />
+    <form action="#" th:action="@{/save}" th:object="${details}"
+          method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>FirstName:</td>
+                <td><input type="text" th:field="*{name}" class="form-Control" id="validationCustom01" required /></td>
+            </tr>
+            <tr>
+                <td>LastName:</td>
+                <td><input type="text" th:field="*{brand}"  class="form-Control" id="validationCustom02" required/></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" th:field="*{madein}" class="form-Control" id="validationCustom03" required /></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="text" th:field="*{price}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Register Now</button> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+
+
+</body>
+</html>

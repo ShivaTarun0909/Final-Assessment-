@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WelcomePage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div align="center">
+<h1>Welcome to v-soft</h1>
+<a href="new">Staff</a>
+<br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Username/Email</th>
+            <th>Password</th>
+            <th>Forgot Password</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${listProducts}">
+            <td th:text="${product.id}">Username/Email</td>
+            <td th:text="${product.name}">Password</td>
+            <td th:text="${product.brand}">Forgot Password</td>
+            <td>
+                <a th:href="@{'/Signup/' + ${details.email}}">Signup</a>
+                &nbsp;&nbsp;&nbsp;
+                <a th:href="@{'/Login/' + ${details.email}}">Login</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginPage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <Div class="asdf">
+
+            <h1> Please SignUp here</h1>
+                
+            </Div>
+
+    </header>
+
+    <section>
+        <div class="qwer">
+
+            <form action="#" th:action="@{/save}" th:object="${details}"
+                  method="post">
+                <table border="0" cellpadding="10">
+                    <tr>
+                        <td>Username/Email:</td>
+                        <td>
+                            <input type="text" th:field="*{email}" class="form-Control" id="validationCustom01" required/>
+                        </td> />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td>
+                            <input type="text" th:field="*{pass}" class="form-Control" id="validationCustom02" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Forgot Password:</td>
+                        <td><input type="text" th:field="*{fpass}" class="form-Control" id="validationCustom03" required /></td>
+                    </tr>
+                    <tr>
+
+                    <tr>
+                        <td colspan="2"><button type="submit">Submit</button> </td>
+                    </tr>
+                </table>
+        </form>
+    </div>
+
+    </section>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
